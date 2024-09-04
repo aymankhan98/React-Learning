@@ -46,15 +46,7 @@ export default function Home() {
 
   return (
     <main className="bg-white">
-     },
-    location: { type: 'text' },
-    organizationDomain: { type: 'text' },
-    generateMxCode: { type: 'text' },
-    generateTeamInvitationLink: {
-      type: 'url',
-    },
-  }
-
+    
     </main>
   );
 }
