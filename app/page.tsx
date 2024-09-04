@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
  
-  const orgFieldDummyData = {
+  const initialState  = {
     name: 'Acme Corporation',
     email: 'info@acme.com',
     userName: 'acme_admin',
@@ -42,11 +43,18 @@ export default function Home() {
       type: 'url',
     },
   }
- 
- 
+
   return (
     <main className="bg-white">
-    
+     },
+    location: { type: 'text' },
+    organizationDomain: { type: 'text' },
+    generateMxCode: { type: 'text' },
+    generateTeamInvitationLink: {
+      type: 'url',
+    },
+  }
+
     </main>
   );
 }
