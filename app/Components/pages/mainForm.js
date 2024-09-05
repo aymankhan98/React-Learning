@@ -1,8 +1,10 @@
+'use client'
+
+
 import Form from "./form1";
 import Form2 from "./form2";
 import Form3 from "./form3";
 import { useState } from "react";
-
 export default function MainForm() {
   const [form, setForm] = useState({
     name: "Acme Corporation",

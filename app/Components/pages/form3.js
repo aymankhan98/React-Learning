@@ -1,7 +1,7 @@
-import Field from "../app/Components/field";
+import Field from "../fields";
 export default function Form3({ form, setForm }) {
   return (
-    <>
+    <div className="flex flex-col">
       <Field
         label="Organization Domain"
         keyName="organizationDomain"
@@ -20,6 +20,6 @@ export default function Form3({ form, setForm }) {
         form={form}
         setForm={setForm}
       />
-    </>
+    </div>
   );
 }

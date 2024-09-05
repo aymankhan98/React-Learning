@@ -1,8 +1,8 @@
-import Field from "../app/Components/field";
+import Field from "../fields";
 
 export default function Form2({ form, setForm }) {
   return (
-    <>
+    <div className="flex flex-col">
       <Field
         label="Position"
         keyName="position"
@@ -34,6 +34,6 @@ export default function Form2({ form, setForm }) {
         form={form}
         setForm={setForm}
       />
-    </>
+    </div>
   );
 }

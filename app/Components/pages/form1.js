@@ -2,7 +2,7 @@ import Field from "../fields";
 
 export default function Form({ form, setForm }) {
   return (
-    <>
+    < div className="flex w-full flex-col justify-center">
       <Field label="Name" keyName="name" form={form} setForm={setForm} />
       <Field
         label="User Name"
@@ -32,6 +32,6 @@ export default function Form({ form, setForm }) {
         form={form}
         setForm={setForm}
       />
-    </>
+    </div>
   );
 }
