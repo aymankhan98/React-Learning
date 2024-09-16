@@ -1,6 +1,9 @@
+"use client"
+
+
 import React, { useState } from 'react';
 
-const Form = () => {
+const FormChallenge = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -48,4 +51,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormChallenge;
