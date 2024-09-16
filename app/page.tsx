@@ -1,7 +1,10 @@
-import MainForm from "@/src/components/useStateForms/mainForm"
+import MainForm from "@/app/src/components/useStateForms/mainForm"
 import TodoSelect from "@/app/src/components/shadcnComponents/multiSelect";
 import CounterChallenge from "@/app/src/components/challenges/challenge1";
 import FormChallenge from "@/app/src/components/challenges/challenge2";
+import TodoList from "@/app/src/components/challenges/challenge3";
+import ArrayComponent from "@/app/src/components/challenges/challenge4";
+import DataFetchingComponent from "@/app/src/components/challenges/challenge5";
 import { ComboboxDemo } from "@/app/src/components/shadcnComponents/comobox";
 import { AccordionDemo } from "@/app/src/components/shadcnComponents/accordiandemo";
 import { AlertDialogDemo } from "@/app/src/components/shadcnComponents/AlertDialogDemo";
@@ -16,10 +19,14 @@ export default function Home() {
 
   return (
     <div className="bg-white grid grid-cols-3 gap-10 p-10" >
-      {/* <MainForm/>
-<TodoSelect/> */}
+      <MainForm/>
+
     <CounterChallenge/>
     <FormChallenge/>
+    <TodoList/>
+    <ArrayComponent/>
+    <DataFetchingComponent/>
+    <TodoSelect/>
     <ComboboxDemo/>
     <AccordionDemo/>
     <AlertDialogDemo/>

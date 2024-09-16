@@ -1,12 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { Button } from "@/src/components/composable/button"
+import { Button } from "@/app/src/components/composable/button"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/src/components/composable/popover"
+} from "@/app/src/components/composable/popover"
 
 interface Todo {
   id: number

@@ -1,3 +1,6 @@
+"use client"
+
+
 import React, { useState, useEffect } from 'react';
 
 const DataFetchingComponent = () => {
@@ -9,7 +12,7 @@ const DataFetchingComponent = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://api.example.com/data');
+      const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
       if (!response.ok) throw new Error('Network response was not ok');
       const result = await response.json();
       setData(result);

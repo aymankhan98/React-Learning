@@ -1,4 +1,4 @@
-import { onChangeHandler } from "@/src/utils/onChange";
+import { onChangeHandler } from "@/app/src/utils/onChange";
 
 export default function Field({ label, keyName, form, setForm }) {
   console.log(label, keyName, form[keyName], form);
