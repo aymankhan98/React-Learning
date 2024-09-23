@@ -1,4 +1,4 @@
-import Field from "../fields";
+import Field from "../composable/fields";
 export default function Form3({ form, setForm }) {
   return (
     <div className="flex flex-col">

@@ -1,4 +1,4 @@
-import Field from "../fields";
+import Field from "@/app/src/components/composable/fields";
 
 export default function Form({ form, setForm }) {
   return (
