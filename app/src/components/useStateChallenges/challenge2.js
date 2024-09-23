@@ -22,7 +22,6 @@ const FormChallenge = () => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <input

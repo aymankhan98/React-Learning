@@ -1,10 +1,12 @@
 import MainForm from "@/app/src/components/useStateForms/mainForm"
 import TodoSelect from "@/app/src/components/shadcnComponents/multiSelect";
-import CounterChallenge from "@/app/src/components/challenges/challenge1";
-import FormChallenge from "@/app/src/components/challenges/challenge2";
-import TodoList from "@/app/src/components/challenges/challenge3";
-import ArrayComponent from "@/app/src/components/challenges/challenge4";
-import DataFetchingComponent from "@/app/src/components/challenges/challenge5";
+import CounterChallenge from "@/app/src/components/useStateChallenges/challenge1";
+import FormChallenge from "@/app/src/components/useStateChallenges/challenge2";
+import TodoList from "@/app/src/components/useStateChallenges/challenge3";
+import ArrayComponent from "@/app/src/components/useStateChallenges/challenge4";
+import UEChallenges1 from "@/app/src/components/useEffectChallenges/uEChallenges1";
+
+import DataFetchingComponent from "@/app/src/components/useStateChallenges/challenge5";
 import { ComboboxDemo } from "@/app/src/components/shadcnComponents/comobox";
 import { AccordionDemo } from "@/app/src/components/shadcnComponents/accordiandemo";
 import { AlertDialogDemo } from "@/app/src/components/shadcnComponents/AlertDialogDemo";
@@ -19,8 +21,7 @@ export default function Home() {
 
   return (
     <div className="bg-white grid grid-cols-3 gap-10 p-10" >
-      <MainForm/>
-
+      {/* <MainForm/>
     <CounterChallenge/>
     <FormChallenge/>
     <TodoList/>
@@ -32,7 +33,9 @@ export default function Home() {
     <AlertDialogDemo/>
     <BreadcrumbDemo/>
     <SonnerDemo/>
-     <Toaster />
+     <Toaster /> */}
+
+     <UEChallenges1 />
     </div>
 
   );

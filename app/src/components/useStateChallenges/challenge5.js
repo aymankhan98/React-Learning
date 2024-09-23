@@ -15,8 +15,7 @@ const DataFetchingComponent = () => {
     setError(null);
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-      
-
+    
       const result = await response.json();
       setData(result);
     } catch (err) {
@@ -25,7 +24,6 @@ const DataFetchingComponent = () => {
       setLoad(false);
     }
   };
-
   useEffect(() => {
     fetchDummyAPI();
   }, []);
