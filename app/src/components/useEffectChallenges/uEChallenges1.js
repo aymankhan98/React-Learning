@@ -1,12 +1,38 @@
-import React from 'react'
+
+"use client"
+import React, { useEffect, useState } from 'react'
 
 function UEChallenges1() {
 
 
+  const[dataApi,setDataApi]=useState(null)
+  const [error, setError] = useState(false);
+
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then((response) => response.json())
+  .then(dataApi => setDataApi(dataApi))
+  .catch(error => setError(error));
+  })
+
     
-  return (
-    <div>uEChallenges1</div>
-  )
+  if (error) {
+            return <div>
+                An error occurred:
+                {error.message}
+            </div>
+        }  else if (!dataApi) {
+                  return <div>wait</div>;
+              }
+              else {
+                return <div>
+                Response from API:
+                {JSON.stringify(dataApi)}
+            </div>  
+            }
+           
 }
 
 export default UEChallenges1
+
+
