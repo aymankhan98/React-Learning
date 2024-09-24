@@ -1,48 +1,36 @@
+
 "use client"
+import React, { useEffect, useState } from 'react'
+
+function DataFetchingComponent() {
 
 
-import React, { useState, useEffect } from 'react';
+  const[dataApi,setDataApi]=useState(null)
+  const [error, setError] = useState(false);
 
-const DataFetchingComponent = () => {
-  const [data, setData] = useState();
-  const [load, setLoad] = useState( );
-  const [error, setError] = useState();
-
-  const fetchDummyAPI = async () => {
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then((response) => response.json())
+  .then(dataApi => setDataApi(dataApi))
+  .catch(error => setError(error));
+  })
 
     
-    setLoad(true);
-    setError(null);
-    try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-    
-      const result = await response.json();
-      setData(result);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoad(false);
-    }
-  };
-  useEffect(() => {
-    fetchDummyAPI();
-  }, []);
+  if (error) {
+            return <div>
+                error 
+                {error.message}
+            </div>
+        }  else if (!dataApi) {
+                  return <div>wait</div>;
+              }
+              else {
+                return <div>
+                Response from API:
+                {JSON.stringify(dataApi)}
+            </div>  
+            }
+           
+}
 
-  if (load) return <div>load</div>;
-  if (error) return (
-    <div>
-      Error: {error}
-      <button onClick={fetchDummyAPI}>Retry</button>
-    </div>
-  );
-
-
-  return (
-    <div>
-      <h1>Data:</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
-  );
-};
-
-export default DataFetchingComponent;
+export default DataFetchingComponent
