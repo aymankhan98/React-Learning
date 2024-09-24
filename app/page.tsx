@@ -5,6 +5,7 @@ import FormChallenge from "@/app/src/components/useStateChallenges/challenge2";
 import TodoList from "@/app/src/components/useStateChallenges/challenge3";
 import ArrayComponent from "@/app/src/components/useStateChallenges/challenge4";
 import UEChallenges1 from "@/app/src/components/useEffectChallenges/uEChallenges1";
+import UEChallenges2 from "@/app/src/components/useEffectChallenges/uEChallenges2";
 
 import DataFetchingComponent from "@/app/src/components/useStateChallenges/challenge5";
 import { ComboboxDemo } from "@/app/src/components/shadcnComponents/comobox";
@@ -36,6 +37,8 @@ export default function Home() {
      <Toaster /> */}
 
      <UEChallenges1 />
+     <UEChallenges2 />
+
     </div>
 
   );
