@@ -15,10 +15,10 @@ function UEChallenges1() {
   .catch(error => setError(error));
   })
 
-    
+
   if (error) {
             return <div>
-                An error occurred:
+                error 
                 {error.message}
             </div>
         }  else if (!dataApi) {
@@ -34,5 +34,3 @@ function UEChallenges1() {
 }
 
 export default UEChallenges1
-
-
